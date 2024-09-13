@@ -9,6 +9,11 @@ export default function Forms() {
   });
   const handleSubmit=(event: { preventDefault: () => void })=>{
     event.preventDefault()
+    setUserInfo({
+      name:"",
+      email:"",
+      password:"",
+    })
     
 }
 const handleChange = (event: any) =>{
@@ -31,6 +36,7 @@ setUserInfo({
         type="text" 
         id="name"
         name="name"
+        value={userInfo.name}
         onChange={handleChange}
        />
         <label htmlFor="email">
@@ -41,6 +47,8 @@ setUserInfo({
         type="text" 
         id="email"
         name="email"
+        value={userInfo.email}
+
         onChange={handleChange}
         />
         <label htmlFor="password">
@@ -51,6 +59,8 @@ setUserInfo({
         type="password" 
         id="password"
         name="password"
+        value={userInfo.password}
+
         onChange={handleChange}
         />
         <button type="submit">
