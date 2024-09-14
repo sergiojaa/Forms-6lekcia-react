@@ -5,6 +5,10 @@ export default function Seminari2() {
       setName(e.target.value);
       localStorage.setItem("name", e.target.value)
   }
+  const handleClick = ()=>{
+    setName("")
+    localStorage.removeItem('name')
+  }
   return (
     <div>
       seminari 2
@@ -12,6 +16,7 @@ export default function Seminari2() {
        value={name}
         onChange={handleChange}
          />
+         <button onClick={handleClick} >clear</button>
     </div>
   )
 }
