@@ -1,4 +1,4 @@
-sssssssimport {  useState } from "react"
+ssssssssssimport {  useState } from "react"
 export default function Seminari2() {
   const [name,setName] = useState(localStorage.getItem("name"||""))
   const handleChange = (
